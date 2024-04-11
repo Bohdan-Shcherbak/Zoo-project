@@ -627,6 +627,18 @@ header .header__container .header__designed .burger__icon {
   height: 10px;
   border-radius: 50%;
   z-index: 2;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.section-donateInformation__container .donate-container .donate__form .form__dotts-container .form__dotts-circles .circle:hover {
+  background-color: #FE9013;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  z-index: 2;
+  border-radius: 50%;
 }
 .section-donateInformation__container .donate-container .donate__form .form__dotts-container .form__dotts-circles .circle.hoverCircle {
   background-color: #FE9013;
