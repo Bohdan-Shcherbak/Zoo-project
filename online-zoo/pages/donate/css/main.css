@@ -630,7 +630,7 @@ header .header__container .header__designed .burger__icon {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
-.section-donateInformation__container .donate-container .donate__form .form__dotts-container .form__dotts-circles .circle:hover {
+.section-donateInformation__container .donate-container .donate__form .form__dotts-container .form__dotts-circles .circle.hoverCircle {
   background-color: #FE9013;
   width: 20px;
   height: 20px;
@@ -640,21 +640,21 @@ header .header__container .header__designed .burger__icon {
   z-index: 2;
   border-radius: 50%;
 }
-.section-donateInformation__container .donate-container .donate__form .form__dotts-container .form__dotts-circles .circle.hoverCircle {
-  background-color: #FE9013;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
-  z-index: 2;
-  border-radius: 50%;
-}
 @media (max-width: 425px) {
   .section-donateInformation__container .donate-container .donate__form .form__dotts-container .form__dotts-circles .circle.hoverCircle {
     width: 15px;
     height: 15px;
   }
+}
+.section-donateInformation__container .donate-container .donate__form .form__dotts-container .form__dotts-circles .circle.targetCircle {
+  background-color: #FE9013;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  z-index: 2;
+  border-radius: 50%;
 }
 .section-donateInformation__container .donate-container .donate__form .form__dotts-container .form__dotts-circles::after {
   position: absolute;
@@ -694,10 +694,19 @@ header .header__container .header__designed .burger__icon {
     padding-left: 13px;
   }
 }
+.section-donateInformation__container .donate-container .donate__form .form__cost .cost__number {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
 .section-donateInformation__container .donate-container .donate__form .form__cost .cost__number.hoverCost {
   color: orange;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.section-donateInformation__container .donate-container .donate__form .form__cost .cost__number.targetCost {
+  color: orange;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 .section-donateInformation__container .donate-container .donate__form .form__cost .cost__thousands {
   -webkit-box-flex: 0;
@@ -902,13 +911,6 @@ header .header__container .header__designed .burger__icon {
   text-align: center;
   line-height: 22px;
   letter-spacing: 0;
-}
-.section-donateInformation__container .donate-container .cost__number:hover ~ .circle {
-  color: orange;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
-  cursor: pointer;
-  background-color: red;
 }
 
 footer {

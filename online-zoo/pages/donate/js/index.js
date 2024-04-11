@@ -8,8 +8,8 @@ const button = document.querySelector('.button');
 function reetCircle(){
   circle.forEach(e =>{
         let idd = e.id;
-    e.classList.remove('hoverCircle');
-    costNumb[idd].classList.remove('hoverCost')
+    e.classList.remove('targetCircle');
+    costNumb[idd].classList.remove('targetCost')
   })
 }
 circle.forEach(e => {
@@ -17,19 +17,19 @@ circle.forEach(e => {
   e.addEventListener('click', () => {
     rangeValueLabel.value = e.title;
     reetCircle()
+    e.classList.add('targetCircle');
+    costNumb[idd].classList.add('targetCost')
+  })
+
+  e.addEventListener('mouseover', () => {
+    let idd = e.id;
     e.classList.add('hoverCircle');
     costNumb[idd].classList.add('hoverCost')
   })
 
-  // e.addEventListener('mouseover', () => {
-  //   let idd = e.id;
-  //   e.classList.add('hoverCircle');
-  //   costNumb[idd].classList.add('hoverCost')
-  // })
-
-  // e.addEventListener('mouseout', () => {
-  //   let idd = e.id;
-  //   e.classList.remove('hoverCircle');
-  //   costNumb[idd].classList.remove('hoverCost')
-  // })
+  e.addEventListener('mouseout', () => {
+    let idd = e.id;
+    e.classList.remove('hoverCircle');
+    costNumb[idd].classList.remove('hoverCost')
+  })
 });
