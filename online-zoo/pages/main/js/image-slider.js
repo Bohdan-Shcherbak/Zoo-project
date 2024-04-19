@@ -6,21 +6,26 @@ const myImageSlider = new Swiper('.image-slider__container', {
         nextEl: '.button-next',
         prevEl: '.button-prev',
     },
-    autoHeight: false,
     loop: false,
-    slidesPerGroup: 6,
 
     breakpoints: {
         0: {
-            slidesPerView: 4,
+            slidesPerView: 1,
             autoHeight: false,
             spaceBetween: 20,
-            simulateTouch: false,
+            simulateTouch: true,
             grabCursor: true,
-            direction: 'vertical',
+            direction: 'horizontal',
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+
+            },
+            autoHeight: true,
+
         },
 
-        441: {
+        641: {
             grid: {
                 rows: 2,
                 column: 2,
@@ -28,9 +33,12 @@ const myImageSlider = new Swiper('.image-slider__container', {
             slidesPerView: 2,
             slidesPerColumn: 2,
             spaceBetween: 30,
+            slidesPerGroup: 1,
+            autoHeight: false,
+
         },
 
-        641: {
+        769: {
             grid: {
                 rows: 2,
                 column: 3,
@@ -38,6 +46,7 @@ const myImageSlider = new Swiper('.image-slider__container', {
             slidesPerView: 3,
             slidesPerColumn: 2,
             spaceBetween: 30,
+            slidesPerGroup: 6,
         },
     }
 })
