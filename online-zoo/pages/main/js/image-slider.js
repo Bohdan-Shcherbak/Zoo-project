@@ -7,7 +7,6 @@ const myImageSlider = new Swiper('.image-slider__container', {
         prevEl: '.button-prev',
     },
     loop: false,
-
     breakpoints: {
         0: {
             slidesPerView: 1,
@@ -47,6 +46,8 @@ const myImageSlider = new Swiper('.image-slider__container', {
             slidesPerColumn: 2,
             spaceBetween: 30,
             slidesPerGroup: 6,
+            effect: "fade",
+
         },
     }
 })
